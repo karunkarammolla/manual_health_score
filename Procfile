@@ -1,1 +1,1 @@
-web: gunicorn my_first_flask_v2:wsgi
+web: gunicorn my_first_flask_v2:app
