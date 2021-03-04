@@ -37,7 +37,7 @@ def input_validator(data):
 
 
 
-@app.route('/inputdata',methods=['POST'])
+@app.route('/Spae',methods=['POST'])
 
 def input():
     input_data = request.get_json()
