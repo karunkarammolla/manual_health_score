@@ -55,17 +55,17 @@ def input():
                 health = PHS.query.filter_by(patient_visit_id=visitid_).first()
                 print('&&&&&&',health.manual_patient_health_score)
                 if health:
-                    if input_data.get('manual_patient_health_score'):
+                    if input_data.get('manual_patient_health_score') != 'null':
                         health.manual_patient_health_score =input_data.get('manual_patient_health_score')
                     else:
                         health.manual_patient_health_score = health.past_health_score
 
-                    if input_data.get('manual_reports_health_score'):
+                    if input_data.get('manual_reports_health_score') != 'null':
                         health.manual_reports_health_score = input_data.get('manual_reports_health_score')
                     else:
                         health.manual_reports_health_score = health.reports_health_score
 
-                    if input_data.get('manual_assessment_health_score'):
+                    if input_data.get('manual_assessment_health_score') != 'null':
                         health.manual_assessment_health_score = input_data.get('manual_assessment_health_score')
                     else:
                         health.manual_assessment_health_score = health.assessment_health_score
