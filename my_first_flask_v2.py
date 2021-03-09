@@ -53,7 +53,7 @@ def input():
             print(user_.role_id)
             if user_.role_id in [4,5]:
                 health = PHS.query.filter_by(patient_visit_id=visitid_).first()
-                print('&&&&&&',health.manual_patient_health_score)
+                
                 if health:
                     if input_data.get('manual_patient_health_score') != 'null':
                         health.manual_patient_health_score =input_data.get('manual_patient_health_score')
